@@ -1,12 +1,12 @@
 #pragma once
 #include <Arduino.h>
 
-class HCSR04
+class MKL_HCSR04
 {
 public:
-	HCSR04(int out, int echo);			//initialisation class HCSR04 (trig pin , echo pin)
-	HCSR04(int out, int echo[], int n); //initialisation class HCSR04 (trig pin , echo pin)
-	~HCSR04();							//destructor
+	MKL_HCSR04(int out, int echo);			//initialisation class MKL_HCSR04 (trig pin , echo pin)
+	MKL_HCSR04(int out, int echo[], int n); //initialisation class MKL_HCSR04 (trig pin , echo pin)
+	~MKL_HCSR04();							//destructor
 	float dist() const;					//return curent distance of element 0
 	float dist(int n) const;			//return curent distance of element n
 
