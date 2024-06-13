@@ -1,12 +1,12 @@
 #######################################
-#   Syntax Coloring Map for HCSR04    #
+#   Syntax Coloring Map for MKL_HCSR04#
 #######################################
 
 #######################################
 #       Datatypes (KEYWORD1)          # 
 #######################################
 
-HCSR04	KEYWORD1
+MKL_HCSR04	KEYWORD1
 
 #######################################
 #  Methods and Functions (KEYWORD2)   #
