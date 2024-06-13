@@ -14,9 +14,9 @@ Documentation for the library is on the
 ![schéma HC_SR04_cabling](examples/HCSR04/HC_SR04_cabling.jpg)
 
 ```ino
-#include <HCSR04.h>
+#include <MKL_HCSR04.h>
 
-HCSR04 hc(5, 6); //initialisation class HCSR04 (trig pin , echo pin)
+MKL_HCSR04 hc(5, 6); //initialisation class MKL_HCSR04 (trig pin , echo pin)
 
 void setup()
 { Serial.begin(9600); }
@@ -32,9 +32,9 @@ void loop()
 > ![schéma HC_SR04_multi_cabling](examples/HCSR04_multi/HC_SR04_cabling.png)
 
 ```ino
-#include <HCSR04.h>
+#include <MKL_HCSR04.h>
 
-HCSR04 hc(2, new int[6]{5, 6, 7, 8, 9, 10}, 6); //initialisation class HCSR04 (trig pin , echo pin, number of sensor)
+MKL_HCSR04 hc(2, new int[6]{5, 6, 7, 8, 9, 10}, 6); //initialisation class MKL_HCSR04 (trig pin , echo pin, number of sensor)
 
 void setup()
 { Serial.begin(9600); }
