@@ -1,6 +1,6 @@
-#include "HCSR04.h"
+#include "MKL_HCSR04.h"
 ////////////////////////////////////consttruct/destruct
-void HCSR04::init(int out, int echo[], int n)
+void MKL_HCSR04::init(int out, int echo[], int n)
 {
 	this->out = out;
 	this->echo = echo;
@@ -9,9 +9,9 @@ void HCSR04::init(int out, int echo[], int n)
 	for (int i = 0; i < n; i++)
 		pinMode(this->echo[i], INPUT);
 }
-HCSR04::HCSR04(int out, int echo) { this->init(out, new int[1]{echo}, 1); }
-HCSR04::HCSR04(int out, int echo[], int n) { this->init(out, echo, n); }
-HCSR04::~HCSR04()
+MKL_HCSR04::MKL_HCSR04(int out, int echo) { this->init(out, new int[1]{echo}, 1); }
+MKL_HCSR04::MKL_HCSR04(int out, int echo[], int n) { this->init(out, echo, n); }
+MKL_HCSR04::~MKL_HCSR04()
 {
 	~this->out;
 	delete[] this->echo;
@@ -19,7 +19,7 @@ HCSR04::~HCSR04()
 }
 
 ///////////////////////////////////////////////////dist
-float HCSR04::dist(int n) const
+float MKL_HCSR04::dist(int n) const
 {
 	digitalWrite(this->out, LOW);
 	delayMicroseconds(2);
@@ -31,4 +31,4 @@ float HCSR04::dist(int n) const
 	// interrupts();
 	return d / 58.8235;
 }
-float HCSR04::dist() const { return this->dist(0); }
+float MKL_HCSR04::dist() const { return this->dist(0); }
